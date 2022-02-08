@@ -12,3 +12,5 @@ http://learnantimo.github.io/run-buddy/
 
 ## Contribution 
 Made with ❤️ by Robbie K. 
+
+### ©️2019 Run Buddy, Inc 
