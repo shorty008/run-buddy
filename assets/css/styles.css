@@ -352,6 +352,14 @@ section {
 
 /* Reach Out Sytles End */
 
-.flex-rox {
+.flex-row {
   display: flex;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right
 }
