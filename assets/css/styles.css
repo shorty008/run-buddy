@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +12,15 @@
   }
 
 body {
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
 
-/* Header Section */
+/* Header/Nav Bar Styles Section */
 header {
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
@@ -31,14 +38,14 @@ header {
 header h1 {
   font-weight: bold;
   font-size: 36px;
-  color: #fce138;
+  color: var(--primary-color);
   margin: 0;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
   
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -61,17 +68,17 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   border-radius: 15px;
   text-shadow: none;
 }
-/* End of Header Section */
+/* End of Header/Nav Bar Styles Section */
 
 
 /* Footer Section */
 footer {
-  background: #fce138;
+  background: var(--primary-color);
   width: 100%;
   padding: 40px 35px;
   display: flex;
@@ -80,7 +87,7 @@ footer {
 }
 
 footer h2 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 30px;
   margin: 0;
 }
@@ -91,9 +98,9 @@ footer div{
 }
 
 footer a {
-  color: #024e76;
+  color: var(--secondary-color);
 }
-/* End of Footer Section */
+/* End of Footer Styles Section */
 
 
 /* Style All Section Tages */
@@ -104,17 +111,86 @@ section {
 
 
 
-/* Hero Style */
+/* Hero Styles Style */
 .hero {
   background-image: url("../images/hero-bg.jpeg");
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
   background-attachment: fixed;
   background-position: 80%;
+}
+
+.hero-cta{
+  width: 35%;
+  text-align: right;
+  margin: 3.5%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.hero-cta h2{
+  font-style: italic;
+  font-size: 55px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-form {
+  background-color: rgba(252, 226, 56, 0.8);
+  padding: 20px;
+  color: var(--secondary-color);
+  border: solid 3px var(--secondary-color);
+  width: 40%;
+  margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.form-input {
+  border: 1px solid var(--secondary-color);
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: var(--secondary-color);
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+.hero-form label {
+  margin: 0 5px;
+}
+
+.hero-form button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.hero-form button:hover {
+  background-color: var(--tertiary-color);
 }
 
 .checkbox-wrapper input, .radio-wrapper input {
@@ -133,7 +209,7 @@ section {
   height: 20px;
   width: 20px;
   background: rgba(255, 255, 255, 0.75);
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   position: absolute;
   top: -4px;
   left: -30px;
@@ -144,24 +220,28 @@ section {
   border-radius: 50%;
 }
 
+.hero-form button:hover {
+  background-color: var(--tertiary-color);
+}
+
 .radio-wrapper label::after {
   content: "";
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #024e76;
+  background: var(--secondary-color);
   position: absolute;
   left: -29px;
   top: -3px;
-  background-image: radial-gradient(circle, #39a6b2, #024e76);
+  background-image: radial-gradient(circle, var(--tertiary-color, var(--secondary-color)));
 }
 
 .checkbox-wrapper label::after {
   content: "";
   height: 6px;
   width: 14px;
-  border-left: 2px solid #024e76;
-  border-bottom: 2px solid #024e76;
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
   position: absolute;
   left: -26px;
   top: 1px;
@@ -176,84 +256,12 @@ section {
   content: "";
 }
 
-.hero-cta{
-  width: 35%;
-  text-align: right;
-  margin: 3.5%;
-  color: #fff;
-  font-size: 18px;
-  line-height: 1.3;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  line-height: 1.2;
-}
-
-.hero-cta h2{
-  font-style: italic;
-  font-size: 55px;
-  color: #fce138;
-}
-  
-.hero-form {
-  background-color: rgba(252, 226, 56, 0.8);
-  padding: 20px;
-  color: #024e76;
-  border: solid 3px #024e76;
-  width: 40%;
-  margin: 3.5%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-}
-
-.hero-form h3 {
-  font-size: 24px;
-  margin: 0;
-}
-
-.hero-form p {
-  margin: 5px 0 15px 0;
-}
-
-.form-input {
-  border: 1px solid #024e76;
-  display: block;
-  padding: 7px 15px;
-  font-size: 16px;
-  color: #024e76;
-  width: 100%;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-.form-input:focus {
-  background-color: rgba(255, 255, 255, 1);
-  outline: none;
-  outline: none;
-}
-
-.hero-form label {
-  margin: 0 5px;
-}
-
-.hero-form button {
-  background-color: #024e76;
-  color: #fce138;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-}
-
-.hero-form button:hover {
-  background-color: #39a6b2;
-}
-
 /* HERO STYLES END */
 
 /* Section Title Style */
 .section-title {
     font-size: 48px;
-    color: #024e76;
+    color: var(--secondary-color);
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -262,18 +270,18 @@ section {
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--primary-color);
 }
 
 .secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--tertiary-color);
 }
 /* End of Section Title Style */
 
 /* What We Do Style */
 .intro p {
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--tertiary-color);
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
@@ -283,8 +291,9 @@ section {
 
 /* What You Do Style */
 .steps {
-  background: #fce138;
+  background: var(--primary-color);
 }
+
 
 .step {
   margin: 50px auto;
@@ -297,13 +306,13 @@ section {
 }
 
 .step:not(:last-child){
-  border-bottom: 1px solid #39a6b2;
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .step h3 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 46px;
-  margin-top: 10px;
+  flex: 1 30%;
 }
 
 .step-info {
@@ -327,14 +336,14 @@ section {
 }
 
 .steps-text p {
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-size: 18px;
 }
 
 .steps-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024e76;
+  color: var(--secondary-color)
 }
 /* End of Steps Section */
 
@@ -349,8 +358,8 @@ section {
 
 .trainer {
   margin: 20px;
-  background: #024e76;
-  color: #fce138;
+  background: var(--secondary-color);
+  color: var(--primary-color);
   flex: 1;
 }
 
@@ -361,14 +370,6 @@ section {
 .trainer-bio {
   padding:25px;
   line-height: 1.3;
-}
-
-.text-left{
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .trainer-bio h3 {
@@ -388,11 +389,11 @@ section {
 
 /* REACH OUT STYLES START */
 .contact {
-  background: #024e76;
+  background: var(--secondary-color);
 }
 
 .contact h2{
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .contact-info iframe {
@@ -404,7 +405,7 @@ section {
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -416,7 +417,7 @@ section {
 }
 
 .contact-info a {
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .contact-info > * {
@@ -431,11 +432,11 @@ section {
 }
 
 .contact-form input, .contact-form textarea {
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -451,21 +452,22 @@ section {
 .contact-form button {
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   font-size: 16px;
   border-radius: 10px;
 }
 
 .contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--primary-color);
+  background: var(--tertiary-color);
 }
 
 /* Reach Out Sytles End */
 
+/* Utilities */
 .flex-row {
   display: flex;
 }
@@ -478,7 +480,7 @@ section {
   text-align: right
 }
 
-
+/* Utitilies End */
 
 /* Media Query for Small Desktop Screens and Smaller */
 @media screen and (max-width: 980px) {
@@ -548,8 +550,9 @@ section {
 
   .step-img {
     flex: 0 32%;
-    text-align: center;
-    justify-content: center;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .step-text {
