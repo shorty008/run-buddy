@@ -419,16 +419,15 @@ section {
   color: #fce138;
 }
 
-.content-info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-
 .contact-info > * {
   flex: 1;
   margin: 15px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact-form input, .contact-form textarea {
